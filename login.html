@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script defer src="./scripts/login.js"></script>
+
+</head>
+
+<body class="login-body">
+    <div class="container">
+        <div class="mask">
+            <div class="new-container">
+                <h1>Hello!</h1>
+                <p>If you already have an account please sign in</p>
+                <button id="sign-in">SIGN IN</button>
+            </div>
+            <div class="old-container">
+                <h1>Welcome Back!</h1>
+                <p>If you don't have an account please register</p>
+                <button id="sign-up">SIGN UP</button>
+            </div>
+        </div>
+        <div class="left-side">
+            <h1>Sign In</h1>
+            <div class="input-grp">
+                <input type="email" placeholder="Email" id='email'>
+                <input type="password" placeholder="Password" id='password'>
+            </div>
+            <small>Forgot your password?</small>
+            <button id="btn1" type="submit">SIGN IN</button>
+        </div>
+        <div class="right-side">
+            <h1>Create Account</h1>
+            <div class="input-grp">
+                <input type="text" placeholder="Name" id = "name2">
+                <input type="email" placeholder="Email" id = "email2">
+                <input type="password" placeholder="Password" id = "pass2">
+            </div>
+            <button id="btn2" type="submit">SIGN UP</button>
+        </div>
+    </div>
+
+    <script>
+        const btn1 = document.querySelector("#btn1")
+        const check = (e) => {
+            // const email = document.querySelector("#email")
+            // const pass = document.querySelector("#password")
+            // console.log(email)
+            // console.log(email.value)
+            // console.log(password.value)
+            // fetch("http://localhost:3500/api/login", {
+            //     method: "POST", // or 'PUT'
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body: JSON.stringify({
+            //         "email": `${email.value}`,
+            //         "password": `${pass.value}`
+            //     }),
+            // })
+            //     .then((response) => response.json())
+            //     .then((data) => {alert(data.message)
+            //                     if (data.message === 'successful login') window.open('home.html')
+            //     });
+            window.open('home.html')
+
+        }
+        btn1.addEventListener('click', check)
+
+        const btn2 = document.querySelector("#btn2")
+        const reg = (e) => {
+            // const name = document.querySelector("#name2")
+            // const email = document.querySelector("#email2")
+            // const pass = document.querySelector("#pass2")
+            // console.log(email)
+            // console.log(email.value)
+            // console.log(password.value)
+            // fetch("http://localhost:3500/api/signup", {
+            //     method: "POST", // or 'PUT'
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body: JSON.stringify({
+            //         "name": `${name.value}`,
+            //         "email": `${email.value}`,
+            //         "password": `${pass.value}`
+            //     }),
+            // })
+            //     .then((response) => response.json())
+            //     .then((data) => {alert(data.message)
+            //                     if (data.message === 'Successfully registered') window.open('home.html')
+            //     });
+            window.open('home.html')
+        }
+        btn2.addEventListener('click', reg)
+    </script>
+
+
+</body>
+
+</html>
